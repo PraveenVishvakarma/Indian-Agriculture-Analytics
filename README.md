@@ -8,7 +8,7 @@
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/indian-agriculture-analytics.git
+    git clone https://github.com/PraveenVishvakarma/indian-agriculture-analytics.git
     cd indian-agriculture-analytics
     ```
 
@@ -55,10 +55,9 @@ The dataset used in this project is stored in `src/data/agricultureData.json`. A
 
 - The average values are rounded off to 3 decimal places.
 - No other helper libraries like Bootstrap, jQuery, Lodash, etc., are used.
-- All unused code and libraries from the CRA template have been removed to reduce clutter.
 - The project is implemented using TypeScript for type safety and React for the UI.
 
 ## Author
 
-- [Your Name](https://github.com/yourusername)
+- [Praveen Vishvakarma](https://github.com/PraveenVishvakarma)
 
