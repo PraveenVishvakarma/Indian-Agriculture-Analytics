@@ -1,46 +1,64 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
 
-## Available Scripts
+- Node.js (>=14.x.x)
+- Yarn (>=1.x.x)
 
-In the project directory, you can run:
+## Setup
 
-### `npm start`
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/yourusername/indian-agriculture-analytics.git
+    cd indian-agriculture-analytics
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. **Install dependencies:**
+    ```sh
+    yarn install
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. **Run the application:**
+    ```sh
+    yarn start
+    ```
 
-### `npm test`
+    The browser should automatically open with the desired page rendered. If not, open your browser and navigate to `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Details
 
-### `npm run build`
+### Data
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The dataset used in this project is stored in `src/data/agricultureData.json`. All missing cell values are treated as 0.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `TableComponent.tsx`: A reusable table component for displaying data.
+- `App.tsx`: Main application component that processes the data and uses `TableComponent` to display two tables.
 
-### `npm run eject`
+### Utilities
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `dataUtils.ts`: Contains utility functions for processing the dataset.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tables
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Table 1**: Displays the crop with maximum and minimum production for each year.
+    - Columns: `Year`, `Crop with Maximum Production`, `Crop with Minimum Production`
+  
+    ![Table 1](public/screenshots/table1.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Table 2**: Displays the average yield and average cultivation area for each crop between 1950-2020.
+    - Columns: `Crop`, `Average Yield (Kg/Ha)`, `Average Cultivation Area (Ha)`
 
-## Learn More
+    ![Table 2](public/screenshots/table2.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The average values are rounded off to 3 decimal places.
+- No other helper libraries like Bootstrap, jQuery, Lodash, etc., are used.
+- All unused code and libraries from the CRA template have been removed to reduce clutter.
+- The project is implemented using TypeScript for type safety and React for the UI.
+
+## Author
+
+- [Your Name](https://github.com/yourusername)
+
